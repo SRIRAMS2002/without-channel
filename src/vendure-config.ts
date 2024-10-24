@@ -23,7 +23,6 @@ import { shouldApplyCouponcode } from "./customPromotionConditions/shouldApply";
 import { ChannelPlugin } from "./plugins/channelPlugin";
 import { AutoAssignCustomerPlugin } from "./plugins/auto-assign-customer.plugin";
 
-
 const IS_DEV = process.env.APP_ENV === "dev";
 
 export const config: VendureConfig = {
