@@ -5,7 +5,7 @@ import { filter } from 'rxjs/operators';
 
 @VendurePlugin({
     imports: [PluginCommonModule],
-    compatibility: '^3.0.3',
+    compatibility: '^3.0.5',
 })
 export class CustomEventPlugin implements OnApplicationBootstrap {
 

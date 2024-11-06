@@ -25,7 +25,7 @@ class CancelOrderRequestResolver {
 
 @VendurePlugin({
     imports: [PluginCommonModule],
-    compatibility: '^3.0.3',
+    compatibility: '^3.0.5',
     configuration: config => {
         config.customFields.Order.push({
             type: 'int',

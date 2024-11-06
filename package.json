@@ -23,8 +23,11 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
+    "@types/react": "18.3.12",
     "@vendure/cli": "3.0.5",
+    "@vendure/ui-devkit": "3.0.5",
     "concurrently": "9.0.1",
+    "ts-node": "^10.9.2",
     "typescript": "5.3.3"
   }
 }

@@ -37,7 +37,7 @@ class CheckUniquePhoneResolver {
 
 @VendurePlugin({
     imports: [PluginCommonModule],
-    compatibility: '^3.0.3',
+    compatibility: '^3.0.5',
     shopApiExtensions: {
       schema: schemaExtension,
       resolvers: [CheckUniquePhoneResolver],

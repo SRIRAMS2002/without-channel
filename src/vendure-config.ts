@@ -1,3 +1,4 @@
+import { compileUiExtensions } from '@vendure/ui-devkit/compiler';
 import { AdminUiPlugin } from "@vendure/admin-ui-plugin";
 import { AssetServerPlugin } from "@vendure/asset-server-plugin";
 import {
@@ -120,6 +121,21 @@ export const config: VendureConfig = {
     AdminUiPlugin.init({
       port: 3000,
       route: "admin",
+      app: compileUiExtensions({
+        outputPath: path.join(__dirname, '../admin-ui/dist'),
+        extensions: [
+            AutoAssignCustomerPlugin.ui,
+            {
+              id: 'assign-customer',
+              extensionPath: path.join(__dirname, 'plugins/ui'),
+              routes: [{ route: 'greet', filePath: 'routes.ts' }],
+              providers: ['providers.ts']
+          },
+            
+        ],
+        
+        devMode: true,
+    }),
     }),
   ],
   orderOptions: {
